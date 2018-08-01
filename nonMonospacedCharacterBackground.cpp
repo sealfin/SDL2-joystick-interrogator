@@ -201,9 +201,9 @@ size_t LD20_NonMonospacedCharacterBackground::f_StringHeightInPixels( const char
   M_CheckIfParameterIsNULL( f_StringHeightInPixels )
 
   size_t i = 0;
-  signed int minimum_baseline_of_last_line, maximum_baseline;
+  signed int minimum_baseline_of_last_line = 0, maximum_baseline;
   bool first_line = true;
-  signed int maximum_baseline_of_first_line;
+  signed int maximum_baseline_of_first_line = 0;
   size_t height = 0;
 
   for( ; i < strlen( p ); i ++ )
